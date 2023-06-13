@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Середнє арифметичне</title>
+    <script>
+        function znaidenniaSeredinnohoArifmetychnoho() {
+            var numbers = document.getElementById("numbers").value;  // Отримуємо значення введеного масиву
+            var arr = numbers.split(",");  // Розбиваємо рядок на окремі числа
+            var summa = 0;
+            var size = arr.length;
+
+            for (var i = 0; i < size; i++) {
+                summa += parseInt(arr[i]);  // Обчислюємо суму всіх чисел у масиві
+            }
+
+            var seredne = summa / size;  // Обчислюємо середнє арифметичне
+
+            document.getElementById("result").innerHTML = "Середнє арифметичне: " + seredne.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+<h1>Середнє арифметичне</h1>
+
+<label for="numbers">Введіть числа, розділені комами:</label>
+<input type="text" id="numbers">
+<button onclick="znaidenniaSeredinnohoArifmetychnoho()">Знайти</button>
+
+<p id="result"></p>
+</body>
+</html>
